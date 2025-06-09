@@ -18,16 +18,21 @@ class coverbook:
             self.signup()
             self.menu()
         elif user_input =='2':
+            if self.user_name =='' and self.password=='':
+                print('sign in first for further processing:')
+                self.menu()
             self.signin()
         elif user_input=='3':
-            pass
+            self.post()
+            
         elif user_input=='4':
-            pass
+            self.message()
         else:
             pass
 
     
     def signup(self):
+       
         email = input('Enter your email:')
         password = input('Enter your password:')
         self.user_name = email
@@ -50,5 +55,16 @@ class coverbook:
             else:
                 print('Please enter correct information:')
                 self.menu()
+
+    def post(self):
+        if self.loggedin ==True:
+           print('You can write a post:/n')
+           user_post = input('Enter any information to post:')
+        else:
+            print('Please signup first to post any information:/n')
+            self.menu()
+
+    def message(self):
+        print('Enter a message for your friend:')
 obj = coverbook()
 
