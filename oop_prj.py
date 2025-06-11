@@ -1,9 +1,19 @@
 class coverbook:
+
+    __id = 0
     def __init__(self):
-        self.user_name = ''
-        self.password = ''
-        self.loggedin = False
-        self.menu()
+         self.user_id = coverbook.__id
+         coverbook.__id += 1
+         self.user_name = 'unik'
+         self.password = ''
+         self.loggedin = False
+        # self.menu()
+
+    def get_name():
+        return coverbook.user_id
+    
+    def set_name(value):
+        coverbook.user_id= value
 
     def menu(self):
         user_input = input('''Welcome how eould you like to proceed:

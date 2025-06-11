@@ -14,3 +14,12 @@
 from oop_prj import coverbook
 
 cb = coverbook()
+cbs= coverbook()
+# print(cb._coverbook__user_name)
+
+# print(cb.get_name())
+# cb.set_name("Hello")
+# print(cb.get_name())
+
+print(cb.user_id)
+print(cbs.user_id)
